@@ -29,6 +29,19 @@ SHOW VARIABLES LIKE '%log_bin%';
 
 ![image-20230912171845312](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230912171845312.png)
 
+开启binlog后：
+
+==SHOW VARIABLES LIKE '%log_bin%';==
+
+![image-20230912180901409](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230912180901409.png)
+
+1. ![image-20230912181248879](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230912181248879.png)
+2. 解析：show binlog events in 'mysql-bin.000001';
+
+查询结果：
+
+![image-20230912181330266](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230912181330266.png)
+
 
 
 ## 3. 查询日志
