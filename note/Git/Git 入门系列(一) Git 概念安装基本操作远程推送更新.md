@@ -6,9 +6,27 @@
 
 # Git
 
-## 1. 下载安装Git
+## 1. 安装Git
 
-官网地址： https://git-scm.com/ 
+官网下载地址： https://git-scm.com/ 
+
+安装文档：https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git
+
+安装完成后，右键git bash 输入 ==git --version== 
+
+![image-20230918170822643](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230918170822643.png)
+
+## 2. Git的基本使用
+
+### 2.1  个人信息设置
+
+```java
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+查看配置    git config -l
+```
+
+
 
 ## 2 .认识Git
 
