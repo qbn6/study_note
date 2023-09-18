@@ -73,5 +73,10 @@ git remote rename origin github  修改远程仓库名origin->github
 git checkout -- ss.txt 注意一定要有“--”  舍弃文件改动
 git reset HEAD <file> 将 stage 状态改为 unstage，也就是移出暂存区到工作区
 git reset . 移除所有
+####
+
+git reset --soft HEAD^不删除工作区的改动，撤销commit，将内容存放在暂存区（add 之后），HEAD^ 或 HEAD~1 表示上一次 commit（HEAD~2就是上上次commit）， 也可以接commitid，如 git reset --soft 8f1fe9，撤销commit 到 「github commit」 那一次提交，之后修改的内容都在暂存区
+
+
 ```
 
