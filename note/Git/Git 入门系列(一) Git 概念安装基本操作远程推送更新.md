@@ -62,6 +62,10 @@ git cat-file -p 331e7256bfc6ce6297ef518b8666b4b7ca91ab9f
 
 ## 5. Git 指令
 
+### 5.1 撤销上一次提交
+
+
+
 ```
 git --version 查看git版本
 git init 初始化文件夹为git仓库
@@ -76,6 +80,11 @@ git reset . 移除所有
 ####
 
 git reset --soft HEAD^不删除工作区的改动，撤销commit，将内容存放在暂存区（add 之后），HEAD^ 或 HEAD~1 表示上一次 commit（HEAD~2就是上上次commit）， 也可以接commitid，如 git reset --soft 8f1fe9，撤销commit 到 「github commit」 那一次提交，之后修改的内容都在暂存区
+
+####
+git reset -- soft撤销commit，保留修改内容到暂存区（index）
+git reset --mixed撤销commit，保留修改内容到工作区（working dir）
+git reset --hard 撤销commit，直接丢弃修改，回退到指定的 commit，也可以理解成，强制回退到某一版本
 
 
 ```
