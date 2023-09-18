@@ -71,6 +71,7 @@ git push -u origin master  推代码到远程仓库 origin是可以修改的
 git remote -v 查看远程版本
 git remote rename origin github  修改远程仓库名origin->github
 git checkout -- ss.txt 注意一定要有“--”  舍弃文件改动
-
+git reset HEAD <file> 将 stage 状态改为 unstage，也就是移出暂存区到工作区
+git reset . 移除所有
 ```
 
