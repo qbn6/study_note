@@ -13,6 +13,60 @@
 	- [3. 配置软链接](#3-配置软链接)
 	- [4. 配置开机启动服务](#4-配置开机启动服务)
 
+
+
+# 0. Linux系统安装Nginx
+
+## 0.1 下载安装
+
+需要素材：![image-20230923105913965](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923105913965.png)
+
+1. 第一步：安装pcre依赖 https://sourceforge.net/projects/pcre/files/pcre/8.37/pcre-8.37.tar.bz2/download 把安装压缩文件放到linux系统中
+2. ![image-20230923110511537](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923110511537.png)
+3. 解压pcre： tar -xvf pcre-8.37.tar.gz
+4. 解压后进入目录 cd pcre-8.37  进入后直接执行./configure完成后执行make&&make install
+5. pcre-config --version 检验是否安装成功，安装成功显示：8.37 安装成功第一个依赖pcre！
+6. 第二步、第三步： 使用yum命令 安装openssl、zlib，使用命令：yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel
+7. 最后一步：安装nginx;将nginx包扔到目录下![image-20230923152853239](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923152853239.png)
+   1. 解压：tar -xvf  nginx-1.24
+   2. cd nginx-1.24;
+   3.  ./configure 
+   4. make&&makeinstall
+   5. cd /usr/local ![image-20230923153335625](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923153335625.png)出现nginx代表安装成功
+   6. nginx 里面有sbin，进入sbin'中有nginx启动命令
+   7. ps -ef |grep nginx 查看nginx进程![image-20230923153732232](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923153732232.png)
+   8. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 此安装过程是在ubuntu18下完成的。
 
 # 1. 基于apt源安装
