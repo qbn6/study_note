@@ -8,6 +8,18 @@
     - [1.准备两个 tomcat，一个 8001 端口，一个 8002 端口，并准备好测试的页面](#1准备两个-tomcat一个-8001-端口一个-8002-端口并准备好测试的页面)
     - [2. 修改 nginx 的配置文件在 http 块中添加 server{}](#2-修改-nginx-的配置文件在-http-块中添加-server)
 
+
+
+# 0. 安装tomcat
+
+```
+https://tomcat.apache.org/download-90.cgi  
+```
+
+![image-20230925140136144](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230925140136144.png)
+
+
+
 # 1. 反向代理实例一
 
 实现效果：使用 nginx 反向代理，访问 www.123.com 直接跳转到 127.0.0.1:8080

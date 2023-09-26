@@ -20,7 +20,7 @@
   - [nginx.conf 详细的配置文件介绍](#nginxconf-详细的配置文件介绍)
   - [总结](#总结)
 
-# 1. 常用命令
+# 1. Ubuntu常用命令
 
 以下命令nginx已经通过apt安装好了，有nginx命令。
 
@@ -498,3 +498,48 @@ location 部分用于匹配网页位置（比如，根目录“/”，“/images
 
 他们之间的关系：server 继承 main，location 继承 server；upstream 既不会继承指令也不会被继承。
 
+# 3. Linux下常用命令
+
+## 3.1 使用命令前提进入nginx目录
+
+1. whereis nginx ![image-20230925085559723](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230925085559723.png)
+2. cd /usr/local/nginx/sbin 
+
+## 3.2 查看nginx版本号
+
+```
+./nginx -v  =》nginx version: nginx/1.24.0
+```
+
+## 3.3  关闭nginx
+
+```
+./nginx -s stop   使用该命令后使用ps -ef | grep nginx 查看进程
+```
+
+## 3.4  开启nginx
+
+```
+./nginx
+```
+
+## 3.5 重新加载nginx
+
+```
+不需要重启也加载nginx
+./nginx -s reload
+```
+
+# 4. nginx配置文件
+
+## 4.1 nginx配置文件的位置
+
+1. nginx配置文件 cd /usr/local/nginx/conf![image-20230925091130718](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230925091130718.png)n
+
+## 4.2 nginx配置文件的组成
+
+1. nginx配置文件由三部分组成
+
+2. 上面可共同查看ubuntu模块
+
+   

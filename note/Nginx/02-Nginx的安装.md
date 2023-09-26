@@ -29,43 +29,46 @@
 6. 第二步、第三步： 使用yum命令 安装openssl、zlib，使用命令：yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel
 7. 最后一步：安装nginx;将nginx包扔到目录下![image-20230923152853239](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923152853239.png)
    1. 解压：tar -xvf  nginx-1.24
+   
    2. cd nginx-1.24;
-   3.  ./configure 
+   
+   3. ./configure 
+   
    4. make&&makeinstall
+   
    5. cd /usr/local ![image-20230923153335625](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923153335625.png)出现nginx代表安装成功
+   
    6. nginx 里面有sbin，进入sbin'中有nginx启动命令
+   
    7. ps -ef |grep nginx 查看nginx进程![image-20230923153732232](C:\Users\Tmac1\AppData\Roaming\Typora\typora-user-images\image-20230923153732232.png)
-   8. 
+   
+   8. 查看开放端口号：firewall-cmd --list-all
+   
+   9. ```
+      安装服务
+      #安装firewalld
+      yum install firewalld firewall-config
+      
+      firewall-cmd --zone=public --add-port=80/tcp --permanent 关闭端口命令
+      systemctl restart firewalld.service 重启防火墙
+      systemctl start firewalld # 开启防火墙
+      firewall-cmd --list-all 查看防火墙所有开启的端口
+      systemctl status firewalld # 或者 firewall-cmd --state 查看防火墙状态
+      systemctl disable firewalld # 停止防火墙
+      systemctl stop firewalld # 禁用防火墙
+      
+      端口管理
+      #打开443/TCP端口
+      firewall-cmd --add-port=443/tcp
+      
+      #永久打开3690/TCP端口
+      firewall-cmd --permanent --add-port=3690/tcp# 查看防火墙，添加的端口也可以看到
+      或者
+      firewall-cmd --list-
+      
+      ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+​    10. 安装结束
 
 此安装过程是在ubuntu18下完成的。
 
